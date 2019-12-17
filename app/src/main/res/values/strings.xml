@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Celo Test (User) </string>
+
+    <string name="userdetail_phone_type_cell">Cell</string>
+    <string name="userdetail_phone_type_home">Home</string>
+    <string name="userdetail_registered">Registered</string>
+    <string name="userdetail_date_of_birth">Date of birth</string>
+    <string name="userdetail_login">Login</string>
+    <string name="userdetaiil_username">Username</string>
+    <string name="userdetaiil_password">Password</string>
+    <string name="userdetail_salt">Salt</string>
+    <string name="userdetail_md5">MD5</string>
+    <string name="userdetail_sha1">SHA1</string>
+    <string name="userdetail_sha256">SHA256</string>
+    <string name="userdetail_about">About %1$s</string>
+
+    <string name="dialog_networkerror_title">Cannot load data</string>
+    <string name="dialog_networkerror_message">Please check your network connection</string>
+    <string name="dialog_networkerror_settings_button">Settings</string>
+    <string name="dialog_error_exit_button">Exit</string>
+
+    <string name="userslist_apierror_title">Api error</string>
+    <string name="userslist_apierror_unknown_message">Unknown api response</string>
+    <string name="userslist_apperror_title">Application error</string>
+
+
+</resources>

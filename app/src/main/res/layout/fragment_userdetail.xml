@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_userdetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/any_toolbar_elevation"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/any_toolbar_elevation"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/imageview_userdetail_avatar"
+            android:layout_width="@dimen/userdetail_avatar"
+            android:layout_height="@dimen/userdetail_avatar"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@id/imageview_userdetail_avatar"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/textview_userdetail_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
+                tools:text="Jayden Green"
+                />
+
+            <TextView
+                android:id="@+id/textview_userdetail_subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle.Inverse"
+                android:maxLines="1"
+                tools:text="jayden.green@example.com"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            style="@style/UserdetailCardViewLinearLayout">
+
+
+            <android.support.v7.widget.CardView
+                style="@style/UserdetailCardView"
+                >
+
+                <LinearLayout
+                    style="@style/UserdetailCardViewLinearLayout"
+                    >
+
+                    <RelativeLayout
+                        style="@style/UserdetailWithIconRelativeLayout">
+
+                        <ImageView
+                            android:id="@+id/imageview_userdetail_icon_phone"
+                            style="@style/UserdetailIconImageView"
+                            android:src="@drawable/ic_phone"
+                            />
+
+                        <LinearLayout
+                            android:id="@+id/linearlayout_userdetail_phone_cell"
+                            style="@style/UserdetailTwoItemLinearLayout"
+                            android:layout_toRightOf="@id/imageview_userdetail_icon_phone"
+                            >
+
+                            <TextView
+                                android:id="@+id/textview_userdetail_phone_cell"
+                                style="@style/UserdetailTwoItemLinearLayoutTextViewTitle"
+                                tools:text="380671234567"
+                                />
+
+                            <TextView
+                                style="@style/UserdetailTwoItemLinearLayoutTextViewDesc"
+                                android:text="@string/userdetail_phone_type_cell"
+                                />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        style="@style/UserdetailTwoItemLinearLayout.InvisibleIcon"
+                        >
+
+                        <TextView
+                            android:id="@+id/textview_userdetail_phone_home"
+                            style="@style/UserdetailTwoItemLinearLayoutTextViewTitle"
+                            tools:text="380671234567"
+                            />
+
+                        <TextView
+                            style="@style/UserdetailTwoItemLinearLayoutTextViewDesc"
+                            android:text="@string/userdetail_phone_type_home"
+                            />
+
+
+                    </LinearLayout>
+
+                    <include layout="@layout/layout_userdetail_inset_withicon_divider"/>
+
+                    <RelativeLayout
+                        style="@style/UserdetailWithIconRelativeLayout">
+
+                        <ImageView
+                            android:id="@+id/imageview_userdetail_icon_location"
+                            style="@style/UserdetailIconImageView"
+                            android:src="@drawable/ic_location"
+                            />
+
+                        <TextView
+                            android:id="@+id/textview_userdetail_location"
+                            style="@style/UserdetailSingleItemTextView"
+                            android:layout_toRightOf="@id/imageview_userdetail_icon_location"
+                            tools:text="1861 jan pieterszoon coenst 1861 jan pieterszoon coenstraat"
+                            />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/UserdetailCardView"
+                >
+
+                <LinearLayout
+                    style="@style/UserdetailCardViewLinearLayout"
+                    >
+
+                    <TextView
+                        android:id="@+id/textview_userdetail_about_user"
+                        style="@style/UserdetailCardViewTitle"
+                        tools:text="About Ivan"/>
+
+                    <include layout="@layout/layout_any_fullbleed_divider"/>
+
+
+                    <LinearLayout
+                        style="@style/UserdetailTwoItemLinearLayout.NoIcon"
+                        >
+
+                        <TextView
+                            style="@style/UserdetailTwoItemLinearLayoutTextViewTitle"
+                            android:text="@string/userdetail_date_of_birth"
+                            />
+
+                        <TextView
+                            android:id="@+id/textview_userdetail_date_of_birth"
+                            style="@style/UserdetailTwoItemLinearLayoutTextViewDesc"
+                            tools:text="1960-09-30 15:23:16"
+                            />
+
+
+                    </LinearLayout>
+
+                    <include layout="@layout/layout_userdetail_inset_noicon_divider"/>
+
+                    <LinearLayout
+                        style="@style/UserdetailTwoItemLinearLayout.NoIcon"
+                        >
+
+                        <TextView
+                            style="@style/UserdetailTwoItemLinearLayoutTextViewTitle"
+                            android:text="@string/userdetail_registered"
+                            />
+
+                        <TextView
+                            android:id="@+id/textview_userdetail_registred"
+                            style="@style/UserdetailTwoItemLinearLayoutTextViewDesc"
+                            tools:text="2005-06-02 22:00:50"
+                            />
+
+
+                    </LinearLayout>
+
+                    <include layout="@layout/layout_userdetail_inset_noicon_divider"/>
+
+                    <LinearLayout
+                        style="@style/UserdetailTwoItemLinearLayout.NoIcon"
+                        >
+
+                        <TextView
+                            android:id="@+id/textview_userdetail_id_name"
+                            style="@style/UserdetailTwoItemLinearLayoutTextViewTitle"
+                            tools:text="BSN"
+                            />
+
+                        <TextView
+                            android:id="@+id/textview_userdetail_id_value"
+                            style="@style/UserdetailTwoItemLinearLayoutTextViewDesc"
+                            tools:text="04242023"
+                            />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                style="@style/UserdetailCardView"
+                android:layout_marginBottom="16dp"
+                >
+
+                <LinearLayout
+                    style="@style/UserdetailCardViewLinearLayout"
+                    >
+
+                    <TextView
+                        style="@style/UserdetailCardViewTitle"
+                        android:text="@string/userdetail_login"/>
+
+                    <include layout="@layout/layout_any_fullbleed_divider"/>
+
+
+                    <LinearLayout
+                        style="@style/UserdetailTwoItemLinearLayout.NoIcon"
+                        >
+
+                        <TextView
+                            style="@style/UserdetailTwoItemLinearLayoutTextViewTitle"
+                            android:text="@string/userdetaiil_username"
+                            />
+
+                        <TextView
+                            android:id="@+id/textview_userdetail_username"
+                            style="@style/UserdetailTwoItemLinearLayoutTextViewDesc"
+                            tools:text="organicrabbit479"
+                            />
+
+
+                    </LinearLayout>
+
+                    <include layout="@layout/layout_userdetail_inset_noicon_divider"/>
+
+                    <LinearLayout
+                        style="@style/UserdetailTwoItemLinearLayout.NoIcon"
+                        >
+
+                        <TextView
+                            style="@style/UserdetailTwoItemLinearLayoutTextViewTitle"
+                            android:text="@string/userdetaiil_password"
+                            />
+
+                        <TextView
+                            android:id="@+id/textview_userdetail_password"
+                            style="@style/UserdetailTwoItemLinearLayoutTextViewDesc"
+                            tools:text="qwerty"
+                            />
+                    </LinearLayout>
+
+                    <include layout="@layout/layout_userdetail_inset_noicon_divider"/>
+
+                    <LinearLayout
+                        style="@style/UserdetailTwoItemLinearLayout.NoIcon"
+                        >
+
+                        <TextView
+                            style="@style/UserdetailTwoItemLinearLayoutTextViewTitle"
+                            android:text="@string/userdetail_salt"
+                            />
+
+                        <TextView
+                            android:id="@+id/textview_userdetail_salt"
+                            style="@style/UserdetailTwoItemLinearLayoutTextViewDesc"
+                            tools:text="XDQt7CoR"
+                            />
+                    </LinearLayout>
+
+                    <include layout="@layout/layout_userdetail_inset_noicon_divider"/>
+
+                    <LinearLayout
+                        style="@style/UserdetailTwoItemLinearLayout.NoIcon"
+                        >
+
+                        <TextView
+                            style="@style/UserdetailTwoItemLinearLayoutTextViewTitle"
+                            android:text="@string/userdetail_md5"
+                            />
+
+                        <TextView
+                            android:id="@+id/textview_userdetail_md5"
+                            style="@style/UserdetailTwoItemLinearLayoutTextViewDesc"
+                            tools:text="7a64184155322d5665f190d9b9064359"
+                            />
+                    </LinearLayout>
+
+                    <include layout="@layout/layout_userdetail_inset_noicon_divider"/>
+
+                    <LinearLayout
+                        style="@style/UserdetailTwoItemLinearLayout.NoIcon"
+                        >
+
+                        <TextView
+                            style="@style/UserdetailTwoItemLinearLayoutTextViewTitle"
+                            android:text="@string/userdetail_sha1"
+                            />
+
+                        <TextView
+                            android:id="@+id/textview_userdetail_sha1"
+                            style="@style/UserdetailTwoItemLinearLayoutTextViewDesc"
+                            tools:text="599b28b52c97cecf4a2e9dcf43e608fbefbfcae7"
+                            />
+                    </LinearLayout>
+
+                    <include layout="@layout/layout_userdetail_inset_noicon_divider"/>
+
+                    <LinearLayout
+                        style="@style/UserdetailTwoItemLinearLayout.NoIcon"
+                        >
+
+                        <TextView
+                            style="@style/UserdetailTwoItemLinearLayoutTextViewTitle"
+                            android:text="@string/userdetail_sha256"
+                            />
+
+                        <TextView
+                            android:id="@+id/textview_userdetail_sha256"
+                            style="@style/UserdetailTwoItemLinearLayoutTextViewDesc"
+                            tools:text="4bd39fb4a5f926d8c184ff49ffc90af0f7427f435b3c05f373230854b4a6e9c4"
+                            />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

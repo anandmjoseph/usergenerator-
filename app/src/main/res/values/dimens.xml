@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="userdetail_marginleft_invisibleicon">56dp</dimen>
+    <dimen name="userdetail_marginleft_noicon">20dp</dimen>
+    <dimen name="userslist_item_avatar">40dp</dimen>
+    <dimen name="userdetail_avatar">50dp</dimen>
+    <dimen name="any_toolbar_elevation">4dp</dimen>
+</resources>
